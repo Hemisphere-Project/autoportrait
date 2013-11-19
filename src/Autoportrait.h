@@ -10,13 +10,14 @@
 #define promenade_mobile_tvs_Autoportrait_h
 
 #include "ofMain.h"
-#include "ofxThreadedImageLoader.h"
+//#include "ofxThreadedImageLoader.h"
+#include "ofURLFileLoader.h"
 
 #define IMG_STACK_LENGHT 3 // must be more than 2
 
 #define STATIC_LENGHT 10
 
-#define PIXEL_SIZE 100 //10
+#define PIXEL_SIZE 50 //10
 class Autoportrait {
     
     
@@ -28,9 +29,9 @@ public:
     void draw();
     void drawStatic();
     
-    void prepareLoadedImageH(ofImage* image);
+    /*void prepareLoadedImageH(ofImage* image);
     void prepareLoadedImageB(ofImage* image);
-    bool hasJustArrived(ofImage image);
+    bool hasJustArrived(ofImage image);*/
     
     void urlResponse(ofHttpResponse & response);
     void loadH();
@@ -60,7 +61,7 @@ public:
         
     int timestamp;
     
-    ofxThreadedImageLoader loader;
+    //ofxThreadedImageLoader loader;
     
     
     
